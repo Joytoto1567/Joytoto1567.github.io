@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<!-- wow.css 基于animate.css 在页面滚动时展现动感的元素动画效果-->
+	<link rel="stylesheet" type="text/css" href="./lib/animate.min.css">
+	<script src="./lib/jquery/jquery-3.3.1.min.js"></script>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 200px;
+			margin:100px;
+			background-color: cyan;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<button class="animated zoomIn">按钮</button>
+	
+	<div class="box" id="id1"></div>
+	<div class="box" id="id2"></div>
+	<div class="box" id="id3"></div>
+	<div class="box" id="id4"></div>
+	<script type="text/javascript">
+		$("button").on("click",function(){
+			$("#id1").addClass("animated infinite bounce")
+			$("#id2").addClass("animated infinite flash")
+			$("#id3").addClass("animated infinite pulse")
+			$("#id4").addClass("animated infinite rubberBand")
+		})
+	</script>
+</body>
+</html>
